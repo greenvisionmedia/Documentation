@@ -1,0 +1,3 @@
+# Hosting Strategy
+
+## Mindset

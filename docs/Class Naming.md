@@ -1,4 +1,4 @@
-# Class Naming
+# Class Naming Strategy
 ## Mindset
 At GVM we follow [Client-First](https://finsweet.com/client-first) in all of our projects. Client-First a wonderful naming convention developed by the Webflow agency Finsweet to make design faster and more structured, all while generating a highly legible website for those unfamiliar with the software.
 

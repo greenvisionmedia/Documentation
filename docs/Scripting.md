@@ -1,3 +1,4 @@
+# Scripting Strategy
 ## Mindset
 Scripting with a CMS like Webflow is tricky, and it's even trickier to add scripts without bloating the page weight.
 
