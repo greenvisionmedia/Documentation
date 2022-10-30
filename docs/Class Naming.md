@@ -96,5 +96,11 @@ Voila: fast, DRY consistent page structuring.
 ### Header strategy
 We've changed `.section_header` in Client-First to `.header_[name]` to better reflect the underlying HTML structure. Headers should always be given the semantic HTML tag `<header>`.
 
-### Global style embed
-During the GV build process, the `[global-styles]` embed is extracted, concatenated with the other website styles, and minified. For more on using embeds in the GV system, see [our guide on using scripts](Scripting%20blog%20post.md).
+### Global styles symbol
+During the GV [build process](/deployment), the `[global-styles]` embed is extracted, concatenated with the other website styles, and minified. 
+
+### Page scripts symbol
+We have added another global symbol used to register [GV scripts](/scripting). This symbol is simply a list element with override fields attached to each list item. 
+
+![[Pasted image 20221028183501.png]]
+During the build process, this element is parsed and the corresponding scripts are added to the build. We now have a quick, intuitive way to add GV scripts straight from the settings panel of the designer - without adding a new embed to every page.
