@@ -1,8 +1,8 @@
 # Class Naming Strategy
 ## Mindset
-At GVM we follow [Client-First](https://finsweet.com/client-first) in all of our projects. Client-First a wonderful naming convention developed by the Webflow agency Finsweet to make design faster and more structured, all while generating a highly legible website for those unfamiliar with the software.
+At GVM we follow [Client-First](https://finsweet.com/client-first) , a wonderful naming convention developed by the Webflow agency Finsweet. Client-First makes designing in Webflow faster and more structured, all while generating a highly legible website for those unfamiliar with the software.
 
-Client-First is almost flawless (we're big fans). Nevertheless, we've discovered a few opportunities for improvement as we developed our low-carbon workflow. We'll call our version GV_CF.
+Client-First is almost flawless (we're big fans). Nevertheless, we've discovered a few opportunities for improvement as we developed our low-carbon workflow. We'll keep track of any changes to the vanilla Client-First system here. 
 
 > All of these have been incorporated into the GV cloneable [template](). 
 
@@ -12,7 +12,7 @@ Client-First is almost flawless (we're big fans). Nevertheless, we've discovered
 We've added the following utility classes we often find ourselves using in our projects.
 
 `[div-stack]` 
-Stack all children of this div
+Stack all children of this div on top of each other. 
 ```
 .div-stack {
 	display: grid;
@@ -29,7 +29,7 @@ Stack all children of this div
 ```
 
 `[hide-visually]`
-Hides the element visually, without obscuring it from screen readers.
+Hides the element visually, without obscuring it from screen readers. Also visible if accessed via the keyboard.
 ```
 .hide-visually:not(:focus):not(:active) {
 	clip: rect(0 0 0 0) !important; 
@@ -61,8 +61,8 @@ We've changed the Client-First core structure slightly.
 page-wrapper
 [ ps | Page Structure
 	global-styles
-	[ hs | Header Structure 
 	nav_component
+	[ hs | Header Structure 
 		header_[header-name]
 			padding-global
 				container-large
@@ -77,7 +77,6 @@ page-wrapper
 						...
 	]
 	footer_component
-	global-styles
 ]
 ```
 
@@ -99,8 +98,3 @@ We've changed `.section_header` in Client-First to `.header_[name]` to better re
 ### Global styles symbol
 During the GV [build process](/deployment), the `[global-styles]` embed is extracted, concatenated with the other website styles, and minified. 
 
-### Page scripts symbol
-We have added another global symbol used to register [GV scripts](/scripting). This symbol is simply a list element with override fields attached to each list item. 
-
-![[Pasted image 20221028183501.png]]
-During the build process, this element is parsed and the corresponding scripts are added to the build. We now have a quick, intuitive way to add GV scripts straight from the settings panel of the designer - without adding a new embed to every page.
