@@ -1,5 +1,3 @@
-@markdown
-
 # Class Naming Strategy
 
 ## Mindset
