@@ -1,5 +1,5 @@
 #Action to deploy directly to a domain
-name: Deploy
+name: Publish
 on:
     push:
     workflow_dispatch:
@@ -11,15 +11,12 @@ jobs:
             - name: 🚚 Get latest code
               uses: actions/checkout@v3
 
-            - name: 🏗️ Build
-              run: gulp
-
             - name: 📩 Deploy to custom domain
               uses: SamKirkland/FTP-Deploy-Action@4.3.1
               with:
                   server: greenvision.media
                   username: gvm@greenvision.media
                   password: ${{secrets.FTP_PASSWORD}}
-                  local-dir: /public/
+                  local-dir: ./public/
                   server-dir: greenvision.media/docs/
                   protocol: ftps
