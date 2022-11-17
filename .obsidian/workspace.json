@@ -11,12 +11,8 @@
             "id": "cc9cbc3796b0f73e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Docs/Class Naming.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -48,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#hide-email",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +61,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +82,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Docs/Class Naming.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +98,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Docs/Class Naming.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +119,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Docs/Class Naming.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -138,9 +131,9 @@
   },
   "active": "cc9cbc3796b0f73e",
   "lastOpenFiles": [
+    "Docs/Class Naming.md",
     "Docs/Scripting.md",
     "Docs/Vectors.md",
-    "Docs/Class Naming.md",
     "Docs/Deployment.md",
     "Docs/Hosting.md",
     "Docs/drop-box.png",

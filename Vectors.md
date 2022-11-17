@@ -1,5 +1,6 @@
-# Vector Strategy
+@magicpaste
 
+# Vector Strategy
 ## Mindset
 SVGs are a great way to add character to a site and save page weight at the same time. We want to encourage the use of lightweight, minified vector files as often as possible.
 

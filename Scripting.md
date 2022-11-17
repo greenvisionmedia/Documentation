@@ -15,7 +15,7 @@ We're basing our strategy on OG web performance optimizer Steve Souder's [14 Rul
 ## Script strategy
 
 We've created GitHub repositories for the scripts we commonly used, and created a pipeline to automatically add them to your site. To include one of these scripts, you only need to follow two steps:
-1. Add an HTML embed or inline element and give it a class like `.gv_[script-name]`.
+1. Add an HTML embed or inline element and give it a class like `.gv-[script-name]`.
 2. Optionally, change data-attributes to change script options
 3. Add a script tag to the document head with the following format `<script src="./js/[script-name].min.js defer">`
 4. Add the scripts you used in the project to the Pusherman options
@@ -33,7 +33,7 @@ Read more about the [build process](Deployment.md).
 This will display the CO2 per page view and the percentile rating. Forked directly from Wholegrain digital's [carbon badge](gitlab.com/wholegrain/(https://gitlab.com/wholegrain/website-carbon-badges/)
 
 **Usage:** 
-Add a span, usually somewhere in the footer, and give it the `gv_carbon` classname. 
+Add a span, usually somewhere in the footer, and give it the `gv-carbon` classname. 
 
 #hide-email
 
@@ -44,7 +44,7 @@ Obfuscate's the client's email to hide it from scrapers and bots.
 **Usage:**
 Add the clients email to an element's attributes. If the client's email is info@example.com, then add `data-user = "info"`, `data-site = "example.com"`.
 
-The script will store the first set of `user` and `site` values it finds in the document. It will use those for each new instance of `.gv_hide-email`, unless those values are overridden by a new set. This lets you use multiple emails on the same page.
+The script will store the first set of `user` and `site` values it finds in the document. It will use those for each new instance of `.gv-hide-email`, unless those values are overridden by a new set. This lets you use multiple emails on the same page.
 
 > To have the final site display the text inside the span instead of the client's email, add the optional attribute to `data-keep-text`
 
@@ -63,7 +63,7 @@ The script will store the first set of `user` and `site` values it finds in the 
 Adds a high-performance youtube embed to your page. Forked directly from [this github project](https://github.com/paulirish/lite-youtube-embed)
 
 **Usage:**
-Add a div with the class `gv_youtube` , then add the video's ID to the attributes. 
+Add a div with the class `gv-youtube` , then add the video's ID to the attributes. 
 
 **Options:** 
 | Attribute        | Description                                               | Required? | Example           |
@@ -80,7 +80,7 @@ Add a div with the class `gv_youtube` , then add the video's ID to the attribute
 Adds an ajax-enabled form to your site. Uses usebasin.com, read [their docs](https://usebasin.com/docs/) for an in depth explanation.
 
 **Usage:**
-Paste your Basin form endpoint into the "actions" field in Webflow element settings, and give the form component the `gv_basin` class.
+Paste your Basin form endpoint into the "actions" field in Webflow element settings, and give the form component the `gv-basin` class.
 
 When submitted *successfully*, the form (that is, not the wrapper form component but the actual HTML form) will disappear. The div with the class `w-form-done` will appear. If the submit fails, the form will remain and the dib with the class `w-form-done` will appear. 
 
