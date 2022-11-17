@@ -27,18 +27,16 @@ Read more about the [build process](Deployment.md).
 
 ## GV Scripts
 
-#carbon
-
-#### `carbon`
+#### `carbon`(#carbon)
 
 This will display the CO2 per page view and the percentile rating. Forked directly from Wholegrain digital's [carbon badge](gitlab.com/wholegrain/(https://gitlab.com/wholegrain/website-carbon-badges/)
 
 **Usage:**
 Add a span, usually somewhere in the footer, and give it the `gv-carbon` classname.
 
-#hide-email
 
-#### `hide-email`
+
+#### `hide-email`(#hide-email)
 
 Obfuscate's the client's email to hide it from scrapers and bots.
 
@@ -56,9 +54,8 @@ The script will store the first set of `user` and `site` values it finds in the 
 | data-user | The email username | Yes | hello
 | data-keep-text | Lets you keep whatever text is inside the link (Boolean) | Yes | N/A
 
-#youtube
 
-#### `youtube`
+#### `youtube`(#youtube)
 
 Adds a high-performance youtube embed to your page. Forked directly from [this github project](https://github.com/paulirish/lite-youtube-embed)
 
@@ -72,9 +69,7 @@ Add a div with the class `gv-youtube` , then add the video's ID to the attribute
 | data-thumbnail | Specify a path to the a thumbnail. Overrides YT's default | No | ./images/jfk
 | data-params | Specify youtube player parameters (see [this](https://developers.google.com/youtube/player_parameters#Parameters) docs page) | No | controls=0&start=10&end=30
 
-#basin
-
-#### `basin`
+#### `basin`(#basin)
 
 Adds an ajax-enabled form to your site. Uses usebasin.com, read [their docs](https://usebasin.com/docs/) for an in depth explanation.
 
