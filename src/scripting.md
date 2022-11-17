@@ -31,7 +31,8 @@ Read more about the [build process](Deployment.md).
 
 This will display the CO2 per page view and the percentile rating. Forked directly from Wholegrain digital's [carbon badge](gitlab.com/wholegrain/(https://gitlab.com/wholegrain/website-carbon-badges/)
 
-**Usage:**
+##### Usage
+
 Add a span, usually somewhere in the footer, and give it the `gv-carbon` classname.
 
 
@@ -40,14 +41,15 @@ Add a span, usually somewhere in the footer, and give it the `gv-carbon` classna
 
 Obfuscate's the client's email to hide it from scrapers and bots.
 
-**Usage:**
+##### Usage
+
 Add the clients email to an element's attributes. If the client's email is info@example.com, then add `data-user = "info"`, `data-site = "example.com"`.
 
 The script will store the first set of `user` and `site` values it finds in the document. It will use those for each new instance of `.gv-hide-email`, unless those values are overridden by a new set. This lets you use multiple emails on the same page.
 
 > To have the final site display the text inside the span instead of the client's email, add the optional attribute to `data-keep-text`
 
-**Options:**
+##### Options
 
 | Attribute | Description | Required? | Example |
 | - | - | - | - |
@@ -60,10 +62,11 @@ The script will store the first set of `user` and `site` values it finds in the 
 
 Adds a high-performance youtube embed to your page. Forked directly from [this github project](https://github.com/paulirish/lite-youtube-embed)
 
-**Usage:**
+##### Usage
+
 Add a div with the class `gv-youtube` , then add the video's ID to the attributes.
 
-**Options:**
+##### Options
 
 | Attribute | Description | Required? | Example |
 | - | - | - | - |
@@ -75,7 +78,8 @@ Add a div with the class `gv-youtube` , then add the video's ID to the attribute
 
 Adds an ajax-enabled form to your site. Uses usebasin.com, read [their docs](https://usebasin.com/docs/) for an in depth explanation.
 
-**Usage:**
+##### Usage
+
 Paste your Basin form endpoint into the "actions" field in Webflow element settings, and give the form component the `gv-basin` class.
 
 When submitted _successfully_, the form (that is, not the wrapper form component but the actual HTML form) will disappear. The div with the class `w-form-done` will appear. If the submit fails, the form will remain and the dib with the class `w-form-done` will appear.
