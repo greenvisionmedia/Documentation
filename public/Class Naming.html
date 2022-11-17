@@ -1,0 +1,42 @@
+<p>@markdown</p><h1 id="class-naming-strategy">Class Naming Strategy</h1><h2 id="mindset">Mindset</h2><p>At GVM we follow <a href="https://finsweet.com/client-first">Client-First</a> , a wonderful naming convention developed by the Webflow agency Finsweet. Client-First makes designing in Webflow faster and more structured, all while generating a highly legible website for those unfamiliar with the software.</p><p>Client-First is almost flawless (we&#39;re big fans). Nevertheless, we&#39;ve discovered a few opportunities for improvement as we developed our low-carbon workflow. We&#39;ll keep track of any changes to the vanilla Client-First system here.</p><blockquote><p>All of these have been incorporated into the GV cloneable <a href="">template</a>.</p></blockquote><h2 id="classes-strategy">Classes strategy</h2><h3 id="new-utility-classes">New utility classes</h3><p><a href="https://www.finsweet.com/client-first/docs/utility-class-systems">Related Client-First docs page</a> We&#39;ve added the following utility classes we often find ourselves using in our projects.</p><p><code>[div-stack]</code> Stack all children of this div on top of each other.</p><pre><code>.div-stack {
+    display: grid;
+}
+
+.div-stack &gt; * {
+    position: relative;
+    grid-column-end: 2;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-row-start: 1;
+    fill: currentColor;
+}
+</code></pre><p><code>[hide-visually]</code> Hides the element visually, without obscuring it from screen readers. Also visible if accessed via the keyboard.</p><pre><code>.hide-visually:not(:focus):not(:active) {
+    clip: rect(0 0 0 0) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    white-space: nowrap !important;
+}
+</code></pre><h2 id="spacing-strategy">Spacing strategy</h2><h3 id="spacing-block-strategy">Spacing block strategy</h3><p><a href="https://www.finsweet.com/client-first/docs/spacing-strategy/#spacing-block-strategy">Related Client-First docs page</a> Instead of adding <code>.padding-bottom</code> + <code>.padding-size</code> to a spacing block, simply add <code>.padding-size</code>.</p><p>Benefits:</p><ul><li><em>Speed</em>: Only one class must be added per block.</li><li><em>Legibility</em>: Spacing size can be seen straight from the HTML tree.</li><li><em>Distinction</em>: Since all spacing blocks use this convention, a spacing block can be quickly distinguished from a spacing wrapper by glancing at the HTML tree.</li></ul><h2 id="core-structure-strategy">Core Structure strategy</h2><h3 id="core-structure">Core Structure</h3><p><a href="https://www.finsweet.com/client-first/docs/core-structure-strategy">Related Client-First docs page</a> We&#39;ve changed the Client-First core structure slightly.</p><pre><code>page-wrapper
+[ ps | Page Structure
+    global-styles
+    nav_component
+    [ hs | Header Structure
+        header_[header-name]
+            padding-global
+                container-large
+                    padding-section-large
+                        ...
+    ]
+    [ ss | Section Structure
+        section_[section-name]
+            padding-global
+                container-large
+                    padding-section-large
+                        ...
+    ]
+    footer_component
+]
+</code></pre><h3 id="symbol-macros">Symbol macros</h3><p>This structure has the added benefit of <strong>symbol macros</strong> (Shown above with <code>[ xx | X Structure ]</code>).</p><p>To use symbol macros:</p><ol><li>Hit <kbd>Ctrl</kbd> + <kbd>E</kbd> to open the finder</li><li>Type the two letter macro and hit enter.</li><li>Hit <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd> to unlink the symbol.</li></ol><p>Voila: fast, DRY consistent page structuring.</p><blockquote><p>The structure of your symbol macros don&#39;t need to follow this exact pattern, nor are you limited to just these macros.</p></blockquote><h3 id="header-strategy">Header strategy</h3><p>We&#39;ve changed <code>.section_header</code> in Client-First to <code>.header_[name]</code> to better reflect the underlying HTML structure. Headers should always be given the semantic HTML tag <code>&lt;header&gt;</code>.</p><h3 id="global-styles-symbol">Global styles symbol</h3><p>During the GV <a href="/deployment">build process</a>, the <code>[global-styles]</code> embed is extracted, concatenated with the other website styles, and minified.</p>

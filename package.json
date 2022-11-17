@@ -1,0 +1,23 @@
+{
+  "name": "documentation",
+  "version": "1.0.0",
+  "description": "Describes our low carbon, low code workflow",
+  "main": "gulpfile.js",
+"type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greenvisionmedia/Documentation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/greenvisionmedia/Documentation/issues"
+  },
+  "homepage": "https://github.com/greenvisionmedia/Documentation#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-markdown": "^6.0.0"
+  }
+}
