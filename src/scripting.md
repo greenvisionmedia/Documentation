@@ -48,8 +48,9 @@ The script will store the first set of `user` and `site` values it finds in the 
 > To have the final site display the text inside the span instead of the client's email, add the optional attribute to `data-keep-text`
 
 **Options:**
+
 | Attribute | Description | Required? | Example |
-| ---------------- | -------------------------------------------------------- | --------- | ----------------- |
+| - | - | - | - |
 | data-site | The email domain | Yes | greenvision.media
 | data-user | The email username | Yes | hello
 | data-keep-text | Lets you keep whatever text is inside the link (Boolean) | Yes | N/A
@@ -63,8 +64,9 @@ Adds a high-performance youtube embed to your page. Forked directly from [this g
 Add a div with the class `gv-youtube` , then add the video's ID to the attributes.
 
 **Options:**
+
 | Attribute | Description | Required? | Example |
-| ---------------- | -------------------------------------------------------- | --------- | ----------------- |
+| - | - | - | - |
 | data-id | The youtube id (the code after watch?v= in the YT url) | Yes | y6120QOlsfU
 | data-thumbnail | Specify a path to the a thumbnail. Overrides YT's default | No | ./images/jfk
 | data-params | Specify youtube player parameters (see [this](https://developers.google.com/youtube/player_parameters#Parameters) docs page) | No | controls=0&start=10&end=30
