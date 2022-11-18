@@ -6,7 +6,7 @@ Scripting with a CMS like Webflow is tricky, and it's even trickier to add scrip
 
 At GV we needed a way to easily and quickly add additional functionality to our projects, without needing too much extra processing power.
 
-We're basing our strategy on OG web performance optimizer Steve Souder's [14 Rules for Faster-Loading Web Sites. ](https://stevesouders.com/examples/rules.php).
+We're basing our strategy on OG web performance optimizer Steve Souder's [14 Rules for Faster-Loading Web Sites](https://stevesouders.com/examples/rules.php).
 
 -   _Rule 6_: Put scripts at the bottom
 -   _Rule 8_: Make Javascript external
@@ -14,7 +14,7 @@ We're basing our strategy on OG web performance optimizer Steve Souder's [14 Rul
 
 ## Script strategy
 
-We've created GitHub repositories for the scripts we commonly used, and created a pipeline to automatically add them to your site. To include one of these scripts, you only need to follow two steps:
+We've created GitHub repositories for the scripts we commonly used, and created a pipeline to automatically add them to your site. To include one of these scripts, you only need to follow four steps:
 
 1. Add an HTML embed or inline element and give it a class like `.gv-[script-name]`.
 2. Optionally, change data-attributes to change script options
@@ -76,7 +76,7 @@ Add a div with the class `gv-youtube` , then add the video's ID to the attribute
 
 #### `basin`[#](#basin)
 
-Adds an ajax-enabled form to your site. Uses usebasin.com, read [their docs](https://usebasin.com/docs/) for an in depth explanation.
+Adds an ajax-enabled form to your site. Uses usebasin.com, read [their docs](https://usebasin.com/docs/) for an in-depth explanation.
 
 ##### Usage
 
