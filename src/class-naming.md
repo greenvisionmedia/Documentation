@@ -2,21 +2,22 @@
 
 ## Mindset
 
-At GVM we follow [Client-First](https://finsweet.com/client-first) , a wonderful naming convention developed by the Webflow agency Finsweet. Client-First makes designing in Webflow faster and more structured, all while generating a highly legible website for those unfamiliar with the software.
+At GVM we follow [Client-First](https://finsweet.com/client-first), a powerful naming convention developed by the Webflow agency Finsweet. Client-First makes designing in Webflow faster and more structured, and leaves clients with a highly legible HTML structure, helpful for those unfamiliar with the software. The consistency of Client-First also lends itself to our build process. 
 
 Client-First is almost flawless (we're big fans). Nevertheless, we've discovered a few opportunities for improvement as we developed our low-carbon workflow. We'll keep track of any changes to the vanilla Client-First system here.
 
-> All of these have been incorporated into the GV cloneable [template]().
+> All of these changes have been incorporated into the GV webflow [template](https://preview.webflow.com/preview/gv-template?utm_medium=preview_link&utm_source=dashboard&utm_content=gv-template&preview=a7478f51e9f47fecf64f59752f832e30&workflow=preview).
 
 ## Classes strategy
 
 ### New utility classes
 
 [Related Client-First docs page](https://www.finsweet.com/client-first/docs/utility-class-systems)
+
 We've added the following utility classes we often find ourselves using in our projects.
 
 `[div-stack]`
-Stack all children of this div on top of each other.
+Stack all children of this div on top of each other. Can be helpful for layering [embedded SVGs](./vectors.html).
 
 ```
 .div-stack {
@@ -53,19 +54,21 @@ Hides the element visually, without obscuring it from screen readers. Also visib
 ### Spacing block strategy
 
 [Related Client-First docs page](https://www.finsweet.com/client-first/docs/spacing-strategy/#spacing-block-strategy)
+
 Instead of adding `.padding-bottom` + `.padding-size` to a spacing block, simply add `.padding-size`.
 
 Benefits:
 
 -   _Speed_: Only one class must be added per block.
 -   _Legibility_: Spacing size can be seen straight from the HTML tree.
--   _Distinction_: Since all spacing blocks use this convention, a spacing block can be quickly distinguished from a spacing wrapper by glancing at the HTML tree.
+-   _Distinction_: Since only scpacing blocks use this strategy, a spacing block can be quickly distinguished from a spacing wrapper by glancing at the HTML tree.
 
 ## Core Structure strategy
 
 ### Core Structure
 
 [Related Client-First docs page](https://www.finsweet.com/client-first/docs/core-structure-strategy)
+
 We've changed the Client-First core structure slightly.
 
 ```
