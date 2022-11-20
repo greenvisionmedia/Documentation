@@ -17,7 +17,7 @@ Client-First is almost flawless (we're big fans). Nevertheless, we've discovered
 We've added the following utility classes we often find ourselves using in our projects.
 
 `[div-stack]`
-Stack all children of this div on top of each other. Can be helpful for layering [embedded SVGs](./vectors.html).
+Stack all children of this div on top of each other. Can be helpful for layering [embedded SVGs](/vectors).
 
 ```
 .div-stack {
@@ -114,4 +114,4 @@ We've changed `.section_header` in Client-First to `.header_[name]` to better re
 
 ### Global styles symbol
 
-During the GV [build process](/deployment), the `[global-styles]` embed is extracted, concatenated with the other website styles, and minified.
+During the GV [build process](#), the `[global-styles]` embed is extracted, concatenated with the other website styles, and minified.

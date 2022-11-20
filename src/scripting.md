@@ -23,13 +23,13 @@ We've created GitHub repositories for the scripts we commonly used, and created 
 
 > If the script is only used on one page, only add the script tag to the custom code for that page. If it will be used globally, use the site-wide custom code.
 
-Read more about the [build process](Deployment.md).
+Read more about the [build process](/deployment).
 
 ## GV Scripts
 
 #### `carbon`[#](#carbon)
 
-This will display the CO2 per page view and the percentile rating. Forked directly from Wholegrain digital's [carbon badge](gitlab.com/wholegrain/(https://gitlab.com/wholegrain/website-carbon-badges/)
+This will display the CO2 per page view and the percentile rating. Forked directly from Wholegrain digital's [carbon badge](https://gitlab.com/wholegrain/website-carbon-badges/)
 
 ##### Usage
 
@@ -100,4 +100,4 @@ We use [Gulp](https://gulpjs.com/) to automate build processes. Mostly, this is 
 
 ### Script template
 
-We have created a [template](github.com/greenvisionmedia/template) with a nice predefined directory structure. It has a `.gulpfile` that will work for most plugins, and a `prettierrc.yaml` that has our favorite Prettier options. You might need to run `>npm install` to get gulp installed in the directory - then just run `>gulp` to get site-ready files in the /public directory.
+We have created a [template](https://github.com/greenvisionmedia/template) with a nice predefined directory structure. It has a `.gulpfile` that will work for most plugins, and a `prettierrc.yaml` that has our favorite Prettier options. You might need to run `>npm install` to get gulp installed in the directory - then just run `>gulp` to get site-ready files in the /public directory.
