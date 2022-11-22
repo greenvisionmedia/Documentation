@@ -8,7 +8,9 @@ The webflow designer does give you access to the underlying code, and by exporti
 
 If we control the build process, we can also automate a suite of compression strategies and technical improvements, to make our websites even faster and even greener. We can add scripts, minify code, improve GDPR compliance, even add CMS content back into our sites.
 
-## Guide
+## Using the chrome extension
+
+
 
 ## Technical Information
 

@@ -11,26 +11,15 @@
             "id": "229822af87025c5e",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "public/wrong-URL.png"
-              }
-            }
-          },
-          {
-            "id": "783cfa540ed1665c",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "src/build-process.md",
+                "file": "src/class-naming.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/build-process.md",
+                "file": "src/class-naming.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/build-process.md",
+                "file": "src/class-naming.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/build-process.md"
+                "file": "src/class-naming.md"
               }
             }
           }
@@ -147,17 +136,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "783cfa540ed1665c",
+  "active": "229822af87025c5e",
   "lastOpenFiles": [
+    "public/wrong-URL.png",
+    "webflow-quick-finder.png.md",
+    "src/class-naming.md",
+    "src/build-process.md",
     "public/webflow-quick-finder.png",
     "src/index.md",
     "src/rasters.md",
     "src/scripting.md",
     "src/vectors.md",
-    "src/class-naming.md",
-    "src/build-process.md",
-    "public/wrong-URL.png",
-    "public/right-URL.png",
-    "public/webflow-core-structure.png"
+    "public/right-URL.png"
   ]
 }
