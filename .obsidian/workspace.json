@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/rasters.md",
+                "file": "src/build-process.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/rasters.md",
+                "file": "src/build-process.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/rasters.md",
+                "file": "src/build-process.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/rasters.md"
+                "file": "src/build-process.md"
               }
             }
           }
@@ -147,17 +147,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "6fba765b74ef63b6",
+  "active": "783cfa540ed1665c",
   "lastOpenFiles": [
-    "public/wrong-URL.png",
-    "public/right-URL.png",
+    "public/webflow-quick-finder.png",
+    "src/index.md",
+    "src/rasters.md",
+    "src/scripting.md",
+    "src/vectors.md",
     "src/class-naming.md",
     "src/build-process.md",
-    "public/webflow-quick-finder.png",
-    "src/vectors.md",
-    "src/scripting.md",
-    "public/webflow-core-structure.png",
-    "Pasted image 20221122114757.png",
-    "public/webflow-page-settings.png"
+    "public/wrong-URL.png",
+    "public/right-URL.png",
+    "public/webflow-core-structure.png"
   ]
 }

@@ -8,7 +8,9 @@ The webflow designer does give you access to the underlying code, and by exporti
 
 If we control the build process, we can also automate a suite of compression strategies and technical improvements, to make our websites even faster and even greener. We can add scripts, minify code, improve GDPR compliance, even add CMS content back into our sites.
 
-## Publish Strategy
+## Guide
+
+## Technical Information
 
 Our build process has two parts, a **backend architecture** which encompasses our node application and Gitlab CI workflow, and a **chrome extension** - the visible front end which integrates directly with the webflow designer. Together, these parts integrate to make a seamless process from clicking 'publish' to seeing your site live.
 
