@@ -2,9 +2,7 @@
 
 ## Mindset
 
-Scripting with a CMS like Webflow is tricky, and it's even trickier to add scripts without bloating the page weight.
-
-At GV we needed a way to easily and quickly add additional functionality to our projects, without needing too much extra processing power.
+Adding javascript with a CMS like Webflow can be tricky, and it's even trickier to do in-keeping with green web best practices. At GV we needed a way to easily and quickly add additional functionality to our projects, without relying on a wasteful method like CDN hosted scripts and libraries, or a packaging a bloated node_modules folder.
 
 We're basing our strategy on OG web performance optimizer Steve Souder's [14 Rules for Faster-Loading Web Sites](https://stevesouders.com/examples/rules.php).
 
@@ -14,7 +12,7 @@ We're basing our strategy on OG web performance optimizer Steve Souder's [14 Rul
 
 ## Script strategy
 
-We've created GitHub repositories for the scripts we commonly used, and created a pipeline to automatically add them to your site. To include one of these scripts, you only need to follow four steps:
+We've created individual GitHub repositories for the scripts we commonly used, and created a pipeline to automatically add them to your site. To include one of these scripts, you only need to follow four steps:
 
 1. Add an HTML embed or inline element and give it a class like `.gv-[script-name]`.
 2. Optionally, change data-attributes to change script options
@@ -57,6 +55,15 @@ The script will store the first set of `user` and `site` values it finds in the 
 | data-user | The email username | Yes | hello
 | data-keep-text | Lets you keep whatever text is inside the link (Boolean) | Yes | N/A
 
+#### `ajax-form`[#](#ajax-form)
+
+Adds ajax functionality to your form. You will need a valid endpoint in the form, we use Basin for this purpose.
+
+##### Usage
+
+Add `gv-ajax-form` to your form. When submitted _successfully_, the form (that is, not the wrapper form component but the actual HTML form) will disappear. The div with the class `w-form-done` will appear. If the submit fails, the form will remain and the div with the class `w-form-done` will appear.
+
+> You don't need to add these classes in webflow; this works out of the box with webflow's failure and success divs.
 
 #### `youtube`[#](#youtube)
 
@@ -76,17 +83,15 @@ Add a div with the class `gv-youtube` , then add the video's ID to the attribute
 
 #### `basin`[#](#basin)
 
-Adds an ajax-enabled form to your site. Uses usebasin.com, read [their docs](https://usebasin.com/docs/) for an in-depth explanation.
+Adds an ajax-enabled, invisible captcha enabled form to your site. Uses the Basin JS code from usebasin.com, read [their docs](https://usebasin.com/docs/) for an in-depth explanation.
 
 ##### Usage
 
 Paste your Basin form endpoint into the "actions" field in Webflow element settings, and give the form component the `gv-basin` class.
 
-When submitted _successfully_, the form (that is, not the wrapper form component but the actual HTML form) will disappear. The div with the class `w-form-done` will appear. If the submit fails, the form will remain and the dib with the class `w-form-done` will appear.
-
-> You don't need to add these classes in webflow; this works out of the box with webflow's failure and success divs.
-
 ## Script writing strategy
+
+Some of the scripts in our github repositories are exactly what you would find hosted on a CDN, but some we've written ourselves. We try to keep these scripts uncomplicated and consistent. That means vanilla JS, simple directory structures, and only dev dependencies.
 
 ### Prettier
 

@@ -69,49 +69,58 @@ Benefits:
 
 [Related Client-First docs page](https://www.finsweet.com/client-first/docs/core-structure-strategy)
 
-We've changed the Client-First core structure slightly.
+We've changed the Client-First core structure slightly:
 
-```
-page-wrapper
-[ ps | Page Structure
-	global-styles
-	nav_component
-	[ hs | Header Structure
-		header_[header-name]
-			padding-global
-				container-large
-					padding-section-large
-						...
-	]
-	[ ss | Section Structure
-		section_[section-name]
-			padding-global
-				container-large
-					padding-section-large
-						...
-	]
-	footer_component
-]
-```
+![webflow-core-structure.png]
 
 ### Symbol macros
 
-This structure has the added benefit of **symbol macros** (Shown above with `[ xx | X Structure ]`).
+This structure has the **component macros** included. These are the green components with a pipe | in the name.
 
 To use symbol macros:
 
-1. Hit <kbd>Ctrl</kbd> + <kbd>E</kbd> to open the finder
+1. Hit <kbd>Ctrl</kbd> + <kbd>E</kbd> to open the quick find window.
 2. Type the two letter macro and hit enter.
-3. Hit <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd> to unlink the symbol.
+3. Hit <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>A</kbd> to unlink the component.
 
-Voila: fast, DRY consistent page structuring.
+![webflow-quick-finder.png]
 
-> The structure of your symbol macros don't need to follow this exact pattern, nor are you limited to just these macros.
+Voila: fast, DRY consistent page structuring. We recommend keeping these macros linked until you've finished any changes you want to carry through the next time you use the symbol.
+
+> The structure of your symbol macros don't need to follow this exact pattern, nor are you limited to just these macros. We included these three in our template for convenience.
 
 ### Header strategy
 
-We've changed `.section_header` in Client-First to `.header_[name]` to better reflect the underlying HTML structure. Headers should always be given the semantic HTML tag `<header>`.
+We've changed `.section_header` in Client-First to `.header_[name]` to better reflect the underlying HTML structure. Headers should always have the semantic HTML tag `<header>`.
 
-### Global styles symbol
+### Global styles component
 
-During the GV [build process](#), the `[global-styles]` embed is extracted, concatenated with the other website styles, and minified.
+We often found we were going over Webflow's 10,000 character limit in the single style embed. To get around this, we changed the single `.global-styles` embed included with vanilla Client-First to a wrapper div called `.gv-styles`. This lets us add a new embed whenever we reach the limit.
+
+As an optional best practice, we like to add a new embed for each page; if the page called 'news' needs it's own styles, you can add a `.news-styles` embed with that CSS. The benefit here is  organization, so you can find the CSS specific to a page easily. Truly global CSS can stay in `.global-styles`, and we find using this strategy usually keeps the global styles embed below 10,000 characters.
+
+During the GV [build process](#), the `.gv-styles` node is parsed and any div with a `.w-embed` class is extracted. All the CSS code inside will combined and added to a single minified CSS file, to reduce HTTP requests and inline styles.
+
+## Page structure strategy
+
+Because GV exports and hosts webflow's static files, the final URL ends up with an ugly '.html' suffix. There are hacks to get rid of this, but the most bulletproof method is to change the directory structure of the site itself. 
+
+![wrong-URL.png]
+
+Web hosts will automatically detect any HTML file inside a website subdirectory called `index.html` or `default.html`, and essentially assign that file as the 'homepage' of the subdirectory. We can do this directly in Webflow.
+
+When you create a new page in Webflow, follow these steps:
+1. Create a folder
+2. Name the folder what you want the page name to be.
+3. Create a new page inside this folder, with the same name
+4. Change the slug to 'default'
+
+![webflow-page-settings.png]
+
+The final webflow page structure will look something like this for a simple site structure.
+
+![webflow-page-structure.png]
+
+The web host will automatically change the `https://website.com/subdirectory/default.html` to `https://website.com/subdirectory/`, like so.
+
+![right-URL.png]

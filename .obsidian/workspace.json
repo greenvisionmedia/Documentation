@@ -11,15 +11,26 @@
             "id": "229822af87025c5e",
             "type": "leaf",
             "state": {
+              "type": "image",
+              "state": {
+                "file": "public/wrong-URL.png"
+              }
+            }
+          },
+          {
+            "id": "783cfa540ed1665c",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "src/class-naming.md",
+                "file": "src/rasters.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/class-naming.md",
+                "file": "src/rasters.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/class-naming.md",
+                "file": "src/rasters.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/class-naming.md"
+                "file": "src/rasters.md"
               }
             }
           }
@@ -136,6 +147,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "229822af87025c5e",
-  "lastOpenFiles": []
+  "active": "6fba765b74ef63b6",
+  "lastOpenFiles": [
+    "public/wrong-URL.png",
+    "public/right-URL.png",
+    "src/class-naming.md",
+    "src/build-process.md",
+    "public/webflow-quick-finder.png",
+    "src/vectors.md",
+    "src/scripting.md",
+    "public/webflow-core-structure.png",
+    "Pasted image 20221122114757.png",
+    "public/webflow-page-settings.png"
+  ]
 }
