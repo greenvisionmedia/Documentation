@@ -1,0 +1,5 @@
+{
+    "layout": "docs.liquid",
+    "tags": "docs",
+    "permalink": "{{ title | slugify }}/"
+}
