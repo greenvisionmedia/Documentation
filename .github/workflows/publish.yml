@@ -15,6 +15,7 @@ jobs:
               uses: TartanLlama/actions-eleventy@master
               with:
                   args: --output html
+                  install_dependencies: true
                     
             - name: 📩 Deploy to custom domain
               uses: SamKirkland/FTP-Deploy-Action@4.3.1
